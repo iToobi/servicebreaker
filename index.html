@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+ </head>
+ <body>
+	<script>
+		caches.keys().then(function(keys){
+			alert("keys: "+keys+" size: "+keys.length);
+		});
+		caches.open("test").then(function(cache){
+			cache.add("mario.png");
+			alert("cache opened");
+		});
+	</script>
+  </body>
+</html>
